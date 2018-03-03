@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.js --exec babel-node --presets es2015,stage-2"
+    "dev": "nodemon src/server.js --exec babel-node --presets es2015,stage-2",
+    "update-schema": "babel-node ./scripts/updateSchema.js --presets es2015,stage-2"
   },
   "author": "lucasbesen",
   "license": "ISC",
