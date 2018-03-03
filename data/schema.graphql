@@ -1,9 +1,9 @@
+type Query {
+  allStudents: [Student]
+}
+
 type Student {
   _id: String
   name: String
   description: String
-}
-
-type Query {
-  allStudents: [Student]
 }
