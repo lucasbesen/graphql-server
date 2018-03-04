@@ -3,7 +3,8 @@ import {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
-  GraphQLList
+  GraphQLList,
+  GraphQLNonNull
 } from 'graphql';
 
 import mongoose from 'mongoose';
@@ -34,6 +35,18 @@ const QueryType = new GraphQLObjectType({
       type: new GraphQLList(StudentType),
       resolve: async () => {
         const student = await Student.find({});
+        return student;
+      },
+    },
+    getStudent: {
+      type: StudentType,
+      args: {
+        _id: {
+          type: GraphQLNonNull(GraphQLString),
+        }
+      },
+      resolve: async(obj, args, context) => {
+        const student = await Student.findById(args._id);
         return student;
       },
     }

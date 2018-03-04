@@ -1,5 +1,6 @@
 type Query {
   allStudents: [Student]
+  getStudent(_id: String!): Student
 }
 
 type Student {
