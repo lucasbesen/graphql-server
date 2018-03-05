@@ -13,6 +13,7 @@
   "dependencies": {
     "graphiql": "^0.11.11",
     "graphql": "^0.13.1",
+    "graphql-relay": "^0.5.4",
     "koa": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
     "koa-graphql": "^0.7.5",

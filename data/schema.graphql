@@ -4,6 +4,8 @@ type Query {
 }
 
 type Student {
+  """The ID of an object"""
+  id: ID!
   _id: String
   name: String
   description: String

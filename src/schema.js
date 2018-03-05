@@ -6,6 +6,7 @@ import {
   GraphQLList,
   GraphQLNonNull
 } from 'graphql';
+import { globalIdField } from 'graphql-relay';
 
 import mongoose from 'mongoose';
 import Student from './models/Student';
@@ -13,6 +14,7 @@ import Student from './models/Student';
 const StudentType = new GraphQLObjectType({
   name: 'Student',
   fields: () => ({
+    id: globalIdField('Student'),
     _id: {
       type: GraphQLString,
       resolve: student => student._id,
