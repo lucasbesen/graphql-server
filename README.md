@@ -6,4 +6,4 @@ For simple version, [check](https://github.com/lucasbesen/entria-server/tree/mas
 
 For client side, [check](https://github.com/lucasbesen/entria)
 
-Bult with **Koa.js**, **GraphQL** and **Relay Modern**
+Built with **Koa.js**, **GraphQL** and **Relay Modern**
