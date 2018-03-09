@@ -1,4 +1,41 @@
-# GraphQL DataLoader Boilerplate
+# Entria Full Stack Challenge - Server
+
+For client side, [check](https://github.com/lucasbesen/entria)
+
+## Queries
+```graphql
+query AllStudentsQuery{
+  allStudents {
+    _id
+    name
+    description
+  }
+}
+
+query GetStudentQuery($studentId: String!) {
+  getStudent(_id: $studentId) {
+    _id
+    name
+    description
+  }
+}
+```
+
+## Mutation
+```graphql
+mutation {
+  RegisterStudent(input: {
+    _id: "5aa1e8a457ec8218cab9b0b1",
+    name: "Adalberto Garcia",
+    description: "Computer Science",
+  }) {
+    newStudent {
+      name
+      description
+    }
+  }
+}
+```
 
 [![CircleCI](https://circleci.com/gh/entria/graphql-dataloader-boilerplate.svg?style=svg)](https://circleci.com/gh/entria/graphql-dataloader-boilerplate)
 [![codecov](https://codecov.io/gh/entria/graphql-dataloader-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/entria/graphql-dataloader-boilerplate)
