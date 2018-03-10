@@ -28,6 +28,7 @@ type Mutation {
   LoginEmail(input: LoginEmailInput!): LoginEmailPayload
   RegisterEmail(input: RegisterEmailInput!): RegisterEmailPayload
   ChangePassword(input: ChangePasswordInput!): ChangePasswordPayload
+  RegisterStudent(input: RegisterStudentInput!): RegisterStudentPayload
 }
 
 """An object with an ID"""
@@ -74,6 +75,19 @@ input RegisterEmailInput {
 
 type RegisterEmailPayload {
   token: String
+  error: String
+  clientMutationId: String
+}
+
+input RegisterStudentInput {
+  _id: String
+  name: String!
+  description: String
+  clientMutationId: String
+}
+
+type RegisterStudentPayload {
+  newStudent: Student
   error: String
   clientMutationId: String
 }
